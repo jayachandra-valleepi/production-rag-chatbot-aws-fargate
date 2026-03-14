@@ -1,0 +1,10 @@
+langchain
+langchain-community
+langchain-openai
+langchain-pinecone
+pinecone-client
+openai
+yfinance
+fastapi
+uvicorn
+python-dotenv
