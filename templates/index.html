@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 AI Medical ChatBot</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+
+<body>
+
+    <div class="chat-wrapper">
+
+        <div class="chat-header">
+            <div class="bot-logo">🤖</div>
+            <div>
+                <h2>AI Medical Assistant</h2>
+                <span>Online</span>
+            </div>
+        </div>
+
+        <div class="chat-body">
+
+            {% if message %}
+            <div class="message user-message">
+                <p>{{ message }}</p>
+            </div>
+            {% endif %}
+
+            {% if response %}
+            <div class="message bot-message">
+                <p>{{ response }}</p>
+            </div>
+            {% endif %}
+
+        </div>
+
+        <form action="/chat" method="post" class="chat-form">
+
+            <input 
+                type="text" 
+                name="message" 
+                placeholder="Type your message..."
+                required
+            >
+
+            <button type="submit">
+                ➤
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+
